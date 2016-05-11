@@ -2,6 +2,7 @@ FROM python:2.7-alpine
 RUN apk add --update \
   build-base \
   openssh-client \
+  libffi-dev \
   && rm -rf /var/cache/apk/*
 RUN pip install ansible boto six
 RUN mkdir /app
